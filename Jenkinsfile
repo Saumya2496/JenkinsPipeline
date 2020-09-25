@@ -6,9 +6,7 @@ stages {
         echo 'Building .......'
         sh 'cd /tmp'
         sh 'pwd'
-        sh 'touch temp.txt'
-        sh 'ls -lrt'
-        sh 'cp temp.txt temp1.txt'
+        
       }
     }
     stage('Test') {
