@@ -4,8 +4,7 @@ stages {
     stage('Build') {
       steps {
         echo 'Building .......'
-        sh 'cd /tmp'
-        sh 'pwd'
+       
         
       }
     }
