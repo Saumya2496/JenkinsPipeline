@@ -1,12 +1,29 @@
-# JenkinsPipeline
-
-Declarative Pipeline-
-
-Pipeline{   -  Top level
-  agent any  --  where to build
-  stages{      ---where work happenes
-    stage("build"){      ---- what to do 
-      steps{
-      }
-   }
-}
+pipeline {
+    agent any
+    
+    stages {
+        stage{'Build') {
+          steps {
+            echo 'Building .......'
+            sh 'cd /tmp'
+            sh 'pwd'
+            sh 'touch temp.txt'
+            sh 'ls -lrt'
+            sh 'cp temp.txt temp1.txt'
+          }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing ...'
+             }
+         }
+         
+         stage('Deploy') {
+            steps {
+                echo 'Deploying ....'
+              }
+              
+            }
+         }
+         
+     }
